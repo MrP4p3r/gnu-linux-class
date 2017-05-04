@@ -8,11 +8,6 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Содержание:
 
    lab4
-
-Содержание
-==========
-
-* :doc:`lab4`
