@@ -22,10 +22,12 @@
 
 Для выполнения работы был написан Dockerfile и bash скрипт (lab4.sh).
 Dockerfile:
-.. literalinclude:: ../lab4/Dockerfile
+.. include:: ../lab4/Dockerfile
+    :literal:
 
 lab4.sh:
-.. literalinclude:: ../lab4/lab4.sh
+.. include:: ../lab4/lab4.sh
+    :literal:
 
 Из Dockerfile видно, что:
 - На этапе построения контейнера:
@@ -36,12 +38,11 @@ lab4.sh:
     - После запускается интерпретатор bash;
 
 Рекомендуемая команда для запуска контейнера:
-```
-docker run -ti --rm mrp4p3r/gnu-linux-class:lab4
-```
+.. code-block:: bash
+    docker run -ti --rm mrp4p3r/gnu-linux-class:lab4
 
 После выполнения приведенной команды в терминале можно увидеть:
-.. image:: ./img/lab4/result.png
+.. image:: _static/img/lab4/result.png
 
 Вывод
 =====
