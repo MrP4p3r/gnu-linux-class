@@ -10,6 +10,8 @@
    :maxdepth: 2
    :caption: Contents:
 
+   lab4
+
 Содержание
 ==========
 
