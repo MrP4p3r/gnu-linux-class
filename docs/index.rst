@@ -8,6 +8,6 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Содержание:
 
+   self
    lab4
