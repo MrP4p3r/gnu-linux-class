@@ -85,6 +85,12 @@ todo_include_todos = False
 #
 html_theme = 'alabaster'
 
+html_sidebars = {
+    '**': [
+        'navigation.html'
+    ]
+}
+
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
@@ -152,6 +158,3 @@ texinfo_documents = [
      author, 'GNULinux2017', 'One line description of project.',
      'Miscellaneous'),
 ]
-
-
-
