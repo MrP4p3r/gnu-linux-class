@@ -3,8 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Операционные системы семейства GNU/Linux (весна, 2017)
-======================================================
+GNU/Linux (весна, 2017)
+=======================
+
+Ссылки:
+
+- `Отчеты <http://gnu-linux.hlebushe.gq>`_
+- `GitHub <https://github.com/MrP4p3r/gnu-linux-class>`_
+- `Docker Hub <https://hub.docker.com/r/mrp4p3r/gnu-linux-class>`_
+
+Содержание:
 
 .. toctree::
    :maxdepth: 2
