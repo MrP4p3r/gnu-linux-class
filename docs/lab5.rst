@@ -47,7 +47,7 @@
 Дополнительно в контейнер была передана переменная среды
 ``MYVAR=passed_variable``. Мы должны ее увидеть в ``output.txt``:
 
-..code-block:: bash
+.. code-block:: bash
 
     cat ./temp/output.txt
 
