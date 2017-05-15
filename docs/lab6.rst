@@ -54,7 +54,7 @@
 .. code-block:: bash
 
     # На хост системе
-    docker run -ti --rm -n L6C mrp4p3r/gnu-linux-class:lab6 bash
+    docker run -ti --rm --name L6C mrp4p3r/gnu-linux-class:lab6 bash
 
     # В запущенном контейнере:
     lab6-server
