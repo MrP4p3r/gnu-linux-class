@@ -20,3 +20,4 @@ GNU/Linux (весна, 2017)
    self
    lab4
    lab5
+   lab6
