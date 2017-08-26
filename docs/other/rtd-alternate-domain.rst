@@ -66,7 +66,7 @@ RTD документация на своем домене с SSL
         }
     }
 
-Gерезагружаем bind9 и nginx::
+Перезагружаем bind9 и nginx::
 
         systemctl restart bind9
         systemctl restart nginx
@@ -85,7 +85,6 @@ Gерезагружаем bind9 и nginx::
 
     mkdir -p /var/www/gnu-linux.hlebushe.gq/.well-known/acme-challenge
     chown nginxuser -R /var/www/gnu-linux.hlebushe.gq
-    ch
 
 Эта директория нужна для acme.sh. Если не установлен acme.sh::
 
@@ -112,7 +111,7 @@ Gерезагружаем bind9 и nginx::
         --key-file /etc/sslcerts/gnu-linux.hlebushe.gq/key.pem \
         --reloadCmd 'systemctl restart nginx'
 
-Очевидно, параметр --reloadCmd должен соответствовать используемой ОС.
+Очевидно, параметр ``--reloadCmd`` должен соответствовать используемой ОС.
 В моем случае acme.sh запускается root пользователем (и cron задача, которую создает acme.sh для обновления сертификатов, тоже выполняется root пользователем), то и владельцем файлов сертификата является root. Серверу nginx необходимо иметь право хотя бы на чтение файлов сертификата. Поэтому я сделал что-то вроде::
 
     groupadd web
