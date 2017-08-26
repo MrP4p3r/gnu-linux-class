@@ -15,9 +15,10 @@ GNU/Linux (весна, 2017)
 Содержание:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    self
    lab4
    lab5
    lab6
+   other
