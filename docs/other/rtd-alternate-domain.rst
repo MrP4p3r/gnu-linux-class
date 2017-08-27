@@ -107,7 +107,7 @@ RTD документация на своем домене с SSL
     # Помещаем его в нашу директорию
     acme.sh --install-cert \
         -d gnu-linux.hlebushe.gq \
-        --cert-file /etc/sslce rts/gnu-linux.hlebushe.gq/cert.pem \
+        --cert-file /etc/sslcerts/gnu-linux.hlebushe.gq/cert.pem \
         --key-file /etc/sslcerts/gnu-linux.hlebushe.gq/key.pem \
         --reloadCmd 'systemctl restart nginx'
 
