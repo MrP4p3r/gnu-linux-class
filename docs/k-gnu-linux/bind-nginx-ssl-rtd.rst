@@ -273,7 +273,7 @@ IP адреса по прописанным в файле зоны доменн�
 
     user nginxuser;
 
-Перезагрузим Nginx:
+Перезагрузим Nginx::
 
     $ systemctl restart nginx
 
@@ -443,9 +443,11 @@ IP адреса по прописанным в файле зоны доменн�
       Process: 13257 ExecStop=/bin/kill -s TERM $MAINPID (code=exited, status=0/SUCCESS)
      Main PID: 13260 (gunicorn)
        CGroup: /system.slice/gc-hlebushe.gq.service
-               ├─13260 /opt/hlebushe.gq/bin/python3 /opt/hlebushe.gq/bin/gunicorn ...
-               ├─13266 /opt/hlebushe.gq/bin/python3 /opt/hlebushe.gq/bin/gunicorn ...
-               └─13268 /opt/hlebushe.gq/bin/python3 /opt/hlebushe.gq/bin/gunicorn ...
+               ├─13260 /opt/hlebushe.gq/bin/python3 /opt/hlebushe.gq/bin/gunicorn -c /etc/django/apps/hlebushe.gq/gunicorn.py hleb.wsgi
+               ├─13266 /opt/hlebushe.gq/bin/python3 /opt/hlebushe.gq/bin/gunicorn -c /etc/django/apps/hlebushe.gq/gunicorn.py hleb.wsgi
+               └─13268 /opt/hlebushe.gq/bin/python3 /opt/hlebushe.gq/bin/gunicorn -c /etc/django/apps/hlebushe.gq/gunicorn.py hleb.wsgi
+
+
 
 Видим, что Gunicorn работает под управлением Python3 из виртуального окружения.
 Ровно как и исполняемый файл Gunicorn взят из виртуального окружения.
@@ -466,7 +468,7 @@ IP адреса по прописанным в файле зоны доменн�
 
         </title>
         <link type="text/css" rel="stylesheet"
-              href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,...
+              href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,cyrillic"/>
         <link type="text/css" rel="stylesheet"
               href="/static/css/normalize.css"/>
         <link type="text/css" rel="stylesheet"
