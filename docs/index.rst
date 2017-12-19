@@ -21,5 +21,5 @@ GNU/Linux (весна, 2017)
    lab4
    lab5
    lab6
-   bind-nginx-ssl-rtd
+   k-gnu-linux/bind-nginx-ssl-rtd
    other
