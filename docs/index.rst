@@ -21,4 +21,5 @@ GNU/Linux (весна, 2017)
    lab4
    lab5
    lab6
+   k-gnu-linux
    other
