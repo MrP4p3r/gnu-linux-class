@@ -58,7 +58,7 @@ python в контейнере. Это заметно увеличит разм�
 Реализаций альтернатив supervisor довольно много. Автором работы
 были рассмотрены некоторые из них:
 
-    * `Supervisord (имплементация на GO) https://github.com/ochinchina/supervisord>`_
+    * `Supervisord (имплементация на GO) <https://github.com/ochinchina/supervisord>`_
     * `Immortal <https://github.com/immortal/immortal>`_
     * `Gosuv <https://github.com/codeskyblue/gosuv>`_
 
