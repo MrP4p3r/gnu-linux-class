@@ -46,7 +46,7 @@ python в контейнере. Это заметно увеличит разм�
 Реализаций альтернатив supervisor довольно много. Автором работы
 были рассмотрены некоторые из них:
 
-    * `Supervisord (имплементация на GO) https://github.com/ochinchina/supervisord`_
+    * `Supervisord (имплементация на GO) https://github.com/ochinchina/supervisord>`_
     * `Immortal <https://github.com/immortal/immortal>`_
     * `Gosuv <https://github.com/codeskyblue/gosuv>`_
 
@@ -248,31 +248,28 @@ Manage.go
 
 .. code-block:: bash
 
-    $ docker exec -ti dns-nginx-ssl sh
-    / # pdnsutil create-zone hlebushe.gq ns1.hlebushe.gq
-    / # pdnsutil add-record hlebushe.gq ns2 NS ns2.hlebushe.gq
-    / # pdnsutil add-record hlebushe.gq ns1 A 51.15.61.148
-    / # pdnsutil add-record hlebushe.gq ns2 A 51.15.61.148
+    $ docker exec -ti dns-nginx-ssl sh -c '
+          pdnsutil create-zone hlebushe.gq ns1.hlebushe.gq
+          pdnsutil add-record hlebushe.gq ns2 NS ns2.hlebushe.gq
+          pdnsutil add-record hlebushe.gq ns1 A 51.15.61.148
+          pdnsutil add-record hlebushe.gq ns2 A 51.15.61.148
+      '
 
 Той же командой ``pdnsutil add-record`` можно добавить несколько
 записей для зоны:
 
 .. code-block:: bash
 
-    / # pdnsutil add-record hlebushe.gq . A 51.15.61.148
-    / # pdnsutil add-record hlebushe.gq gnu-linux CNAME hlebushe.gq
+    $ docker exec -ti dns-nginx-ssl sh -c '
+          pdnsutil add-record hlebushe.gq . A 51.15.61.148
+          pdnsutil add-record hlebushe.gq gnu-linux CNAME hlebushe.gq
+      '
 
 Или же можно отредактировать записи зоны более привычным способом:
 
 .. code-block:: bash
 
-    / # pdnsutil edit-zone hlebushe.gq
-
-Последнюю команду можно вызывать через ``docker exec``:
-
-.. code-block:: bash
-
-    # docker exec -ti dns-nginx-ssl \
+    $ docker exec -ti dns-nginx-ssl \
           pdnsutil edit-zone hlebushe.gq
 
 Добавляем оставшиеся поддомены для сервисов, которые мы хотим запустить.
